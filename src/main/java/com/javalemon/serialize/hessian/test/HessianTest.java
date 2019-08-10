@@ -43,15 +43,7 @@ public class HessianTest {
         // 1、将字节数组转换成字节输入流
         ByteArrayInputStream bis = new ByteArrayInputStream(data);
 
-        // step 1. 定义外部序列化工厂
-        //ExtSerializerFactory extSerializerFactory = new ExtSerializerFactory();
-        //extSerializerFactory.addSerializer(java.time.OffsetDateTime.class, new OffsetDateTimeRedisSerializer());
-        //extSerializerFactory.addDeserializer(java.time.OffsetDateTime.class, new OffsetDateTimeRedisDeserializer());
-        // step 2. 序列化工厂
-        //SerializerFactory serializerFactory = new SerializerFactory();
-        //serializerFactory.addFactory(extSerializerFactory);
         HessianInput hessianInput = new HessianInput(bis);
-        //hessianInput.setSerializerFactory(serializerFactory);
         Object object = null;
 
         try {
